@@ -276,6 +276,7 @@ function doAladinSearch() {
   dd.classList.add('show');
   aladinTimer = setTimeout(function() {
     window._aladinCb = function(data) {
+      console.log("알라딘 응답", data);
       if (!data || !data.item || !data.item.length) {
         dd.innerHTML = '<div class="searching-msg">검색 결과가 없습니다</div>'; return;
       }
