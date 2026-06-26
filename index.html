@@ -293,7 +293,7 @@ function doAladinSearch() {
         };
         var encoded = encodeURIComponent(JSON.stringify(obj));
         var html = '<div class="book-option" onclick="selectBook(this)" data-book="'+encoded+'">';
-        if (item.cover) html += '<img class="book-thumb" src="'+item.cover+'" onerror="this.style.display='none'">';
+        if (item.cover) html += '<img class="book-thumb" src="${item.cover}" onerror="this.style.display='none'">';
         html += '<div>';
         html += '<div class="book-opt-title">'+item.title+'</div>';
         html += '<div class="book-opt-meta">'+(item.author||'')+' · '+(item.publisher||'')+(year?' · '+year:'')+'</div>';
